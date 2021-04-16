@@ -1,13 +1,15 @@
-import styled from 'styled-components';
+import { HeaderStyle, Logo } from './styles';
+import Botao from '../BotaoLogin/index';
 
-const Header = styled.header`
-    width: 100%;
-    height: 10vh;
-    padding: 5px auto;
-    background-color: #000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-`;
+function Header() {
+    return (
+        <>
+            <HeaderStyle>
+                <Logo />
+                <Botao />
+            </HeaderStyle>
+        </>
+    );
+}
 
 export default Header;

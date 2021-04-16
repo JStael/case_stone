@@ -1,10 +1,29 @@
-import styled from 'styled-components';
+import { ConteudoStyle, TitleStyle, Pesquisar } from '../Main/styles';
+import ThumbsComics from '../ThumbsComics';
+import ThumbsCharacters from '../ThumbsCharacters';
 
-const Conteudo = styled.div`
-    display: flex;
-    height: 42.5vh;
-    display: flex;
-    border-top: 4px solid #ed1d25;
-`;
+function Conteudo() {
+    return (
+        <>
+            <ConteudoStyle>
+                <TitleStyle>
+                    <h2>COMICS</h2>
+                    <Pesquisar placeholder="Pesquisar" />
+                </TitleStyle>
+                <ThumbsComics />
+
+            </ConteudoStyle>
+
+            <ConteudoStyle>
+                <TitleStyle>
+                    <h2>CHARACTERS</h2>
+                    <Pesquisar placeholder="Pesquisar" />
+                </TitleStyle>
+                <ThumbsCharacters />
+
+            </ConteudoStyle>
+        </>
+    );
+}
 
 export default Conteudo;
