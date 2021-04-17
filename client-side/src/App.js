@@ -1,19 +1,32 @@
 import Header from "./components/Header";
-import Main from './components/Main';
+import Home from './pages/Home';
+import Cadastro from './pages/Cadastro';
+import Login from './pages/Login';
 import Footer from "./components/Footer";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
 import './styles/settings.css';
 
 function App() {
 
   return (
-    <>
+    <Router>
       <Header />
-      <Main />
+
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/cadastro" component={Cadastro} />
+        <Route path="/login" component={Login} />
+      </Switch>
+
       <Footer>
         <p>Desenvolvido por João Stael</p>
       </Footer>
-    </>
+    </Router>
   );
 }
 

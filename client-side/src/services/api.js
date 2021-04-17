@@ -10,8 +10,7 @@ const api = axios.create({
     params: {
         ts: timeStamp,
         apikey: apiKey,
-        hash,
-
+        hash
     }
 });
 

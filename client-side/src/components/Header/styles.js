@@ -4,16 +4,16 @@ import logo from '../../assets/img/Logo.svg';
 
 export const HeaderStyle = styled.header`
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     padding: 5px auto;
     background-color: #000;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 `;
 
 export const Logo = styled.img.attrs({ src: logo, alt: 'Logo Marvel' })`
-    width: 150px;
+    width: 220px;
 `;
 
 export const BotaoLogin = styled.button`
@@ -22,6 +22,8 @@ export const BotaoLogin = styled.button`
     border: 2px solid #fff;
     border-radius: 50px;
     display: flex;
+    position: absolute;
+    right: 20px;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainStyle = styled.main`
-    min-height: 85vh;
+    min-height: 80vh;
     margin-bottom: 5vh;
     background-color: #E5E5E5;
     display: flex;
@@ -20,10 +20,10 @@ export const ConteudoStyle = styled.div`
     border-top: 4px solid #ed1d25;
 `;
 
-export const TitleStyle = styled.h2`
+export const TitleStyle = styled.div`
     position: relative;
     width: 100%;
-    height: 30px;
+    height: 50px;
     background-color: #000;
     display: flex;
     align-items: center;

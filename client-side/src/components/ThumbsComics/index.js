@@ -6,28 +6,26 @@ function ThumbsComics() {
     const [comics, setComics] = useState([]);
 
     useEffect(() => {
-        api
-            .get('comics')
+        api.get('comics')
             .then(response => {
                 setComics(response.data.data.results);
-                console.log("Segundo log", comics)
             })
-            .catch(error => console.log('Esse é o erro', error))
+            .catch(error => console.error('Esse é o erro', error));
     }, [])
 
     const verMaisComics = useCallback(async () => {
         try {
-            const offset = comics.lenght;
-            const response = await api.get('comics', {
+            const offset = comics.length;
+            const { data } = await api.get('comics', {
                 params: {
-                    offset: 20,
-                },
+                    offset,
+                }
             });
 
-            setComics([...comics, ...response.data.data.results]);
+            setComics([...comics, ...data.data.results]);
 
         } catch (erro) {
-            console.log(erro)
+            console.error(erro)
         }
     }, [comics]);
 

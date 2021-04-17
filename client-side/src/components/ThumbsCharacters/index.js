@@ -10,14 +10,13 @@ function ThumbsCharacters() {
             .get('characters')
             .then(response => {
                 setCharacters(response.data.data.results);
-                console.log("Segundo log", characters)
             })
             .catch(error => console.log('Erro', error))
     }, [])
 
     const verMaisCharacters = useCallback(async () => {
         try {
-            const offset = characters.lenght;
+            const offset = characters.length;
             const response = await api.get('characters', {
                 params: {
                     offset,
