@@ -5,7 +5,7 @@ import logo from '../../assets/img/Logo.svg';
 export const HeaderStyle = styled.header`
     width: 100%;
     height: 20vh;
-    padding: 5px auto;
+    /* padding: 5px auto; */
     background-color: #000;
     display: flex;
     justify-content: center;

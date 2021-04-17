@@ -1,7 +1,18 @@
-import styled from 'styled-components';
+import BoxCadastro from '../components/BoxCadastro';
+import { LoginStyle, Wrapper } from '../components/Login/styles';
+import { TitleStyle } from '../components/Main/styles';
 
-const Cadastro = styled.main`
-    background-color: blue;
-`;
+function Login() {
+    return (
+        <LoginStyle>
+            <TitleStyle>
+                <h2>ÁREA DO USUÁRIO</h2>
+            </TitleStyle>
+            <Wrapper>
+                <BoxCadastro />
+            </Wrapper>
+        </LoginStyle>
+    );
+}
 
-export default Cadastro;
+export default Login;
