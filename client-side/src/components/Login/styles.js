@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoginStyle = styled.div`
-  height: 80vh;
+  height: 85vh;
   border-top: 4px solid #ed1d25;
 `;
 
