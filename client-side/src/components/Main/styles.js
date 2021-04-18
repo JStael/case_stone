@@ -40,11 +40,17 @@ export const TitleStyle = styled.div`
     color: #fff;
     background-color: #ed1d25;
   }
+
+  img {
+    position: absolute;
+    right: 20px;
+    width: 15px;
+  }
 `;
 
 export const Pesquisar = styled.input`
   position: absolute;
-  right: 10px;
+  right: 40px;
   width: 230px;
   height: 20px;
   background-color: #000;
