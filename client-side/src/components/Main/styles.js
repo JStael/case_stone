@@ -48,18 +48,22 @@ export const TitleStyle = styled.div`
   }
 `;
 
-export const Pesquisar = styled.input`
-  position: absolute;
-  right: 40px;
-  width: 230px;
-  height: 20px;
-  background-color: #000;
-  border: none;
-  border-bottom: 2px solid #fff;
-  color: #fff;
+export const Pesquisar = styled.div`
+  input {
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    width: 230px;
+    height: 20px;
+    background-color: #000;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
 
-  ::placeholder {
-    font-style: italic;
+    ::placeholder {
+      font-style: italic;
+    }
   }
 `;
 

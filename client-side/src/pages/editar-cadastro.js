@@ -1,18 +1,18 @@
-import BoxLogin from "../components/BoxLogin";
+import BoxEditarCadastro from "../components/BoxEditarCadastro";
 import { LoginStyle, Wrapper } from "../components/Login/styles";
 import { TitleStyle } from "../components/Main/styles";
 
-function login() {
+function EditarCadastro() {
   return (
     <LoginStyle>
       <TitleStyle>
         <h2>ÁREA DO USUÁRIO</h2>
       </TitleStyle>
       <Wrapper>
-        <BoxLogin />
+        <BoxEditarCadastro />
       </Wrapper>
     </LoginStyle>
   );
 }
 
-export default login;
+export default EditarCadastro;

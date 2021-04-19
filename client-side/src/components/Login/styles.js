@@ -30,7 +30,7 @@ export const TitleLogin = styled.div`
   justify-content: center;
 `;
 
-export const BoxConteudo = styled.div`
+export const BoxConteudoLogin = styled.div`
   color: #f1f1f1;
   display: flex;
   flex-direction: column;
@@ -39,29 +39,144 @@ export const BoxConteudo = styled.div`
   height: 80%;
   margin-top: 10px;
 
-  input {
-    background-color: #000;
-    border: none;
-    padding: 10px;
-    width: 70%;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #c1c1c1;
-    color: #f1f1f1;
-  }
-
-  button {
-    width: 80%;
-    padding: 10px;
-    background-color: #ed1d25;
-    border: none;
-    color: #c1c1c1;
-    margin-top: 20px;
-  }
-
   p {
     font-size: 0.8rem;
     font-style: italic;
     margin-top: 10px;
-    color: #f1f1f1;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    button {
+      width: 80%;
+      cursor: pointer;
+      background-color: #ed1d25;
+      border: none;
+      color: #f1f1f1;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    input {
+      background-color: #000;
+      border: none;
+      padding: 10px;
+      width: 70%;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #c1c1c1;
+      color: #f1f1f1;
+      outline: none;
+      margin-right: 5px;
+    }
+  }
+`;
+
+export const BoxConteudoEditar = styled.div`
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  margin-top: 10px;
+
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .botoes {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      height: 50px;
+
+      button {
+        width: 40%;
+        cursor: pointer;
+        background-color: #ed1d25;
+        border: none;
+        color: #f1f1f1;
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #btn-cancelar {
+        width: 40%;
+        cursor: pointer;
+        border: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        color: #000;
+        width: 40%;
+      }
+    }
+
+    .campos {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        background-color: #000;
+        border: none;
+        padding: 10px;
+        width: 70%;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #c1c1c1;
+        color: #f1f1f1;
+        outline: none;
+        margin-right: 5px;
+      }
+    }
+  }
+`;
+
+export const BoxConteudoCadastrar = styled.div`
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+
+    input {
+      background-color: #000;
+      border: none;
+      padding: 10px;
+      width: 70%;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #c1c1c1;
+      color: #f1f1f1;
+      outline: none;
+    }
+
+    button {
+      width: 80%;
+      cursor: pointer;
+      background-color: #ed1d25;
+      border: none;
+      color: #f1f1f1;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: 10px;
+    }
   }
 `;

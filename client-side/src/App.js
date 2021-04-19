@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import home from "./pages/home";
 import cadastro from "./pages/cadastro";
+import editarCadastro from "./pages/editar-cadastro";
 import login from "./pages/login";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" exact component={home} />
         <Route path="/cadastro" component={cadastro} />
         <Route path="/login" component={login} />
+        <Route path="/editar-cadastro" component={editarCadastro} />
       </Switch>
 
       <Footer>
