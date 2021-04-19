@@ -1,10 +1,30 @@
 import { BoxConteudoLogin, BoxLoginStyle, TitleLogin } from "../Login/styles";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import api from "../../services/api";
 
 function BoxLogin() {
+  const history = useHistory();
   const { register, handleSubmit } = useForm();
-  const loginUsuario = (data) => console.log(data);
+  const loginUsuario = async (data) => {
+    const { email, senha } = data;
+
+    const usuario = {
+      email,
+      senha,
+    };
+
+    await api
+      .post("http://localhost:3001/login", usuario)
+      .then(({ data }) => {
+        localStorage.setItem("auth_token", data.token);
+        history.push("/");
+      })
+      .catch((error) => {
+        console.error("Esse é o erro:", error);
+        alert("Usuário e/ou senha inválido(s)!");
+      });
+  };
 
   return (
     <BoxLoginStyle>

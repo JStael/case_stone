@@ -43,15 +43,33 @@ export const TitleStyle = styled.div`
 
   img {
     position: absolute;
-    right: 20px;
+    left: 20px;
     width: 15px;
+  }
+
+  button {
+    width: 50px;
+    height: 25px;
+    background-color: #ed1d25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      transition: all 1s;
+    }
   }
 `;
 
 export const Pesquisar = styled.div`
   input {
     position: absolute;
-    right: 40px;
+    left: 40px;
     top: 5px;
     width: 230px;
     height: 20px;

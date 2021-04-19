@@ -3,12 +3,31 @@ import {
   BoxLoginStyle,
   TitleLogin,
 } from "../Login/styles";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import api from "../../services/api";
 
 function BoxCadastro() {
+  const history = useHistory();
   const { register, handleSubmit } = useForm();
-  const novoUsuario = (data) => console.log(data);
+  const novoUsuario = async (data) => {
+    const { nome, sobrenome, email, senha } = data;
+
+    const usuario = {
+      nome,
+      sobrenome,
+      email,
+      senha,
+    };
+
+    await api
+      .post("http://localhost:3001/usuarios", usuario)
+      .then(({ data }) => {
+        alert(data.message);
+        history.push("/login");
+      })
+      .catch((error) => console.error("Esse é o erro:", error));
+  };
 
   return (
     <BoxLoginStyle>
@@ -28,7 +47,7 @@ function BoxCadastro() {
           />
           <button type="submit">Criar conta</button>
           <p>
-            <Link to="/Login">Voltar para tela de login</Link>
+            <Link to="/login">Voltar para tela de login</Link>
           </p>
         </form>
       </BoxConteudoCadastrar>
